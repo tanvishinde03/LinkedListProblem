@@ -17,6 +17,7 @@ namespace LinkedListProblem
                 Console.WriteLine("Plase enter an object an option");
                 Console.WriteLine("Select Option 1");
                 Console.WriteLine("Select Option 2");
+                Console.WriteLine("Select Option 3");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -27,6 +28,11 @@ namespace LinkedListProblem
                         break;
                     case 2:
                         linkedlist.Display();
+                        break;
+                    case 3:
+                        linkedlist.InReverse(56);
+                        linkedlist.InReverse(30);
+                        linkedlist.InReverse(70);
                         break;
                     default:
                         Console.WriteLine("Enter correct option");

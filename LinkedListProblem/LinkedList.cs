@@ -44,11 +44,22 @@ namespace LinkedListProblem
             Console.ReadLine();
         }
 
-
-
-
-
-
-
+        public void InReverse(int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
+            {
+                head = node;
+            }
+            else
+            {
+                Node temp = head;
+                node.next = temp;
+                head = node;
+            }
+            Console.WriteLine($"{node.data} ");
+        }
     }
 }
+    
+
