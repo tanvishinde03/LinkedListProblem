@@ -14,7 +14,7 @@ namespace LinkedListProblem
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Plase enter an object an option");
+                Console.WriteLine("Plase enter the option");
                 Console.WriteLine("Select Option 1");
                 Console.WriteLine("Select Option 2");
                 Console.WriteLine("Select Option 3");
@@ -47,12 +47,15 @@ namespace LinkedListProblem
                         linkedlist.RemoveFirstNode();
                         break;
                     case 5:
-                        linkedlist.Display();
+                        linkedlist.Add(56);
+                        linkedlist.Add(30);
+                        linkedlist.Add(70);
+                        linkedlist.RemoveLastNode();
                         break;
                     case 6:
-                        Console.WriteLine("Enter correct option");
+                        linkedlist.Display();
                         break;
-                       
+                   
                 }
             }
 

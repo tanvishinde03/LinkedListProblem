@@ -85,6 +85,27 @@ namespace LinkedListProblem
             Console.WriteLine("the first element is deleted");
         }
 
+        public void RemoveLastNode()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("lined list is empty");
+            }
+            if (head.next == null)
+            {
+                head = null;
+            }
+            else
+            {
+                Node laastNode = this.head;
+                while (laastNode.next.next != null)
+                {
+                    laastNode = laastNode.next;
+                }
+                laastNode.next = null;
+                Console.WriteLine("the last node is deleted");
+            }
+        }
 
 
     }
