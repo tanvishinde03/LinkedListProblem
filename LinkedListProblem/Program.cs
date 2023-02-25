@@ -60,12 +60,14 @@ namespace LinkedListProblem
                         linkedlist.Add(56);
                         linkedlist.Add(30);
                         linkedlist.Add(70);
-                        linkedlist.Add(80);
+                        linkedlist.Add(56);
+                        linkedlist.Add(30);
+                        linkedlist.Add(70);
                         linkedlist.SearchElement(30);
+                        linkedlist.SearchElement(70);
                         linkedlist.Display();
                         break;
-                   
-                   
+                
                 }
             }
 

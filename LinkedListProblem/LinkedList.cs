@@ -94,22 +94,30 @@ namespace LinkedListProblem
         }
         public void SearchElement(int data)
         {
-            Node temp = head;
-            while (temp != null)
+            int count = 0;
+            Node tempNode = this.head;
+            if (tempNode == null)
+                Console.WriteLine("Linke list is empty");
+            else
             {
-                if (temp.Data == data)
+                while (tempNode != null)
                 {
-                    Console.WriteLine("The node {0} is found.", temp.Data);
-                    return;
+                    if (tempNode.Data.Equals(data))
+                    {
+                        count++;
+                    }
+                    tempNode = tempNode.Next;
                 }
-                temp = temp.Next;
             }
-            if (temp == null)
-            {
-                Console.WriteLine("\nThe Node {0} is not found in the linked list.", data);
-            }
+            if (count > 0)
+                Console.WriteLine(data + " data found " + count + ": time ");
+            else
+                Console.WriteLine(" data not found\n");
         }
-        public void Display()
+
+       
+    
+            public void Display()
         {
             Node tempNode = this.head;
             if (tempNode == null)
