@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -12,7 +13,9 @@ namespace LinkedListProblem
         static void Main(string[] args)
         {
             LinkedList linkedlist = new LinkedList();
-          
+            LinkedListStack stack = new LinkedListStack();
+
+
             bool flag = true;
             while (flag)
             {
@@ -24,6 +27,9 @@ namespace LinkedListProblem
                 Console.WriteLine("Select Option 5");
                 Console.WriteLine("Select Option 6");
                 Console.WriteLine("Select Option 7");
+                Console.WriteLine("Select Option 8");
+                Console.WriteLine("Select Option 9");
+                Console.WriteLine("Select Option 10");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -72,6 +78,23 @@ namespace LinkedListProblem
                         linkedlist.Add(40);
                         linkedlist.Size();
                         linkedlist.Display();
+                        break;
+                    case 8:
+                        linkedlist.Display();
+                        break;
+                    case 9:
+                        stack.Push(10);
+                        stack.Push(20);
+                        stack.Push(30);
+                        stack.Display();
+                        break;
+                    case 10:
+                        stack.Push(10);
+                        stack.Push(20);
+                        stack.Push(30);
+                        stack.Display();
+                        stack.Pop(20);
+                        stack.Display();
                         break;
                 }
             }
