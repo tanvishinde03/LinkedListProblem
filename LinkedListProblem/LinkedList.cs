@@ -115,8 +115,29 @@ namespace LinkedListProblem
                 Console.WriteLine(" data not found\n");
         }
 
-       
-    
+        public void Size()
+        {
+            Node temp = head;
+            int count = 0;
+            if (temp == null)
+            {
+                Console.WriteLine("Linked List is empty.");
+            }
+            while (temp != null)
+            {
+                Console.WriteLine(temp.Data + " ");
+                temp = temp.Next;
+                count++;
+            }
+            Console.WriteLine("Count" + count);
+
+
+            Console.ReadLine();
+
+
+
+        }
+
             public void Display()
         {
             Node tempNode = this.head;
