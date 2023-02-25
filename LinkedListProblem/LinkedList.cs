@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,31 +20,16 @@ namespace LinkedListProblem
             else
             {
                 Node temp = head;
-                while (temp.next != null)
+                while (temp.Next != null)
 
                 {
-                    temp = temp.next;
+                    temp = temp.Next;
                 }
-                temp.next = node;
+                temp.Next = node;
             }
-            Console.WriteLine("{0} inserted into Linked List ", node.data);
+            Console.WriteLine("{0} inserted into Linked List ", node.Data);
         }
-        public void Display()
-        {
-            Node temp = this.head;
-            if (temp == null)
-            {
-                Console.WriteLine("Linked list is empty");
-            }
-            Console.WriteLine("Linked list is: ");
-            while (temp != null)
-            {
-                Console.WriteLine(temp.data + " ");
-                temp = temp.next;
-            }
-            Console.ReadLine();
-        }
-
+        
         public void InReverse(int data)
         {
             Node node = new Node(data);
@@ -54,10 +40,10 @@ namespace LinkedListProblem
             else
             {
                 Node temp = head;
-                node.next = temp;
+                node.Next = temp;
                 head = node;
             }
-            Console.WriteLine($"{node.data} ");
+            Console.WriteLine($"{node.Data} ");
         }
         public void Append(int data)
         {
@@ -65,12 +51,12 @@ namespace LinkedListProblem
             if (head != null)
             {
                 Node temp = head;
-                while (temp.next != null)
+                while (temp.Next != null)
                 {
-                    temp = temp.next;
+                    temp = temp.Next;
                 }
-                temp.next = node;
-                Console.WriteLine($"{node.data} is added after the {temp.data}");
+                temp.Next = node;
+                Console.WriteLine($"{node.Data} is added after the {temp.Data}");
             }
             else { head = node; }
         }
@@ -81,7 +67,7 @@ namespace LinkedListProblem
             {
                 Console.WriteLine("linked list is empty");
             }
-            this.head = this.head.next;
+            this.head = this.head.Next;
             Console.WriteLine("the first element is deleted");
         }
 
@@ -91,26 +77,62 @@ namespace LinkedListProblem
             {
                 Console.WriteLine("lined list is empty");
             }
-            if (head.next == null)
+            if (head.Next == null)
             {
                 head = null;
             }
             else
             {
                 Node laastNode = this.head;
-                while (laastNode.next.next != null)
+                while (laastNode.Next.Next != null)
                 {
-                    laastNode = laastNode.next;
+                    laastNode = laastNode.Next;
                 }
-                laastNode.next = null;
+                laastNode.Next = null;
                 Console.WriteLine("the last node is deleted");
             }
         }
+        public void SearchElement(int data)
+        {
+            Node temp = head;
+            while (temp != null)
+            {
+                if (temp.Data == data)
+                {
+                    Console.WriteLine("The node {0} is found.", temp.Data);
+                    return;
+                }
+                temp = temp.Next;
+            }
+            if (temp == null)
+            {
+                Console.WriteLine("\nThe Node {0} is not found in the linked list.", data);
+            }
+        }
+        public void Display()
+        {
+            Node tempNode = this.head;
+            if (tempNode == null)
+            {
+                Console.WriteLine("Linked list is empty");
+            }
+            else
+            {
+                Console.Write("Linked list is: ");
+                while (tempNode != null)
+                {
+                    Console.Write(tempNode.Data + " ");
+                    tempNode = tempNode.Next;
+                }
+                Console.WriteLine("\n");
 
+            }
+
+
+
+
+        }
 
     }
 }
-    
-
-    
 

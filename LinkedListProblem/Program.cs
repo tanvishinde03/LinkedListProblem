@@ -11,6 +11,7 @@ namespace LinkedListProblem
         static void Main(string[] args)
         {
             LinkedList linkedlist = new LinkedList();
+          
             bool flag = true;
             while (flag)
             {
@@ -21,6 +22,8 @@ namespace LinkedListProblem
                 Console.WriteLine("Select Option 4");
                 Console.WriteLine("Select Option 5");
                 Console.WriteLine("Select Option 6");
+               
+              
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -51,10 +54,17 @@ namespace LinkedListProblem
                         linkedlist.Add(30);
                         linkedlist.Add(70);
                         linkedlist.RemoveLastNode();
-                        break;
-                    case 6:
                         linkedlist.Display();
                         break;
+                    case 6:
+                        linkedlist.Add(56);
+                        linkedlist.Add(30);
+                        linkedlist.Add(70);
+                        linkedlist.Add(80);
+                        linkedlist.SearchElement(30);
+                        linkedlist.Display();
+                        break;
+                   
                    
                 }
             }

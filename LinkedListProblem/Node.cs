@@ -8,12 +8,13 @@ namespace LinkedListProblem
 {
     public class Node
     {
-        public int data;
-        public Node next;
+        public int Data;
+        public Node Next;
         public Node(int data)
         {
-            this.data = data;
+            this.Data = data;
         }
+
     }
 }
 
