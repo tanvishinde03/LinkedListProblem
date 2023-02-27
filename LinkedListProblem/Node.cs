@@ -19,7 +19,7 @@ namespace LinkedListProblem
             Data = data;
             Next = next;
         }
-
+     
     }
 }
 

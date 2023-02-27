@@ -14,12 +14,12 @@ namespace LinkedListProblem
         {
             LinkedList linkedlist = new LinkedList();
             LinkedListStack stack = new LinkedListStack();
-
+            LinkedListQueue queue = new LinkedListQueue();
 
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Plase enter the option");
+                Console.WriteLine("\n Plase enter the option");
                 Console.WriteLine("Select Option 1");
                 Console.WriteLine("Select Option 2");
                 Console.WriteLine("Select Option 3");
@@ -30,6 +30,8 @@ namespace LinkedListProblem
                 Console.WriteLine("Select Option 8");
                 Console.WriteLine("Select Option 9");
                 Console.WriteLine("Select Option 10");
+                Console.WriteLine("Select Option 11");
+                Console.WriteLine("Select Option 12");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -95,6 +97,18 @@ namespace LinkedListProblem
                         stack.Display();
                         stack.Pop(20);
                         stack.Display();
+                        break;
+                    case 11:
+                        queue.Enqueue(10);
+                        queue.Enqueue(20);
+                        queue.Enqueue(30);
+                        queue.Display();
+                        break;
+                    case 12:
+                        queue.Dequeue();
+                        break;
+                    case 13:
+                        queue.Display();
                         break;
                 }
             }
